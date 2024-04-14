@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-
 function SayGreeting() {
   const [showGreeting, setShowGreeting] = useState(true);
   const handleClick = () => {
