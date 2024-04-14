@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 
 function SayGreeting() {
+  const [showGreeting, setShowGreeting] = useState(true);
   const handleClick = () => {
     console.log('Clicked the button');
+    setShowGreeting(!showGreeting)
   }
   return <div>
-    <p>Hello</p>
-    <button onClick={handleClick}>Click</button>
+    {showGreeting && <p>Hello</p>}
+    <button onClick={handleClick}>Show / Hide</button>
   </div>;
 }
 export default SayGreeting;
